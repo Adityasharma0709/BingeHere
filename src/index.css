@@ -1,1 +1,23 @@
 @import "tailwindcss";
+:root{
+--stormy-teal: #006466ff;
+--dark-teal: #065a60ff;
+--dark-teal-2: #0b525bff;
+--dark-teal-3: #144552ff;
+--charcoal-blue: #1b3a4bff;
+--deep-space-blue: #212f45ff;
+--space-indigo: #272640ff;
+--midnight-violet: #312244ff;
+--midnight-violet-2: #3e1f47ff;
+--deep-purple: #4d194dff;
+--apnabackground: #00111c;
+  --bg-gradient: linear-gradient(
+    135deg,
+    #006466,
+    #065a60,
+    #0b525b,
+    #144552,
+    #1b3a4b,
+    #212f45
+  );
+}
