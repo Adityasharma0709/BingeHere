@@ -1,5 +1,5 @@
 # BingeHere
-
+![Home](public/fav-removebg.png)
 BingeHere is a full-stack movie ticket booking web application developed using the MERN stack.
 The project aims to provide users with a simple and efficient platform to browse movies, view available shows, select seats, and book movie tickets online.
 
