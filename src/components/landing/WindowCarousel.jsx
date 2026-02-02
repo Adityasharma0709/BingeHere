@@ -1,22 +1,12 @@
 import { useState, useEffect } from "react";
 
 const banners = [
-  // Hollywood
-  "https://image.tmdb.org/t/p/original/xDMIl84Qo5Tsu62c9DGWhmPI67A.jpg", // Avengers
-  "https://image.tmdb.org/t/p/original/8YFL5QQVPy3AgrEQxNYVSgiPEbe.jpg", // Avatar
-  "https://image.tmdb.org/t/p/original/r7XifzvtezNt31ypvsmb6Oqxw49.jpg", // John Wick
-  "https://image.tmdb.org/t/p/original/hZkgoQYus5vegHoetLkCJzb17zJ.jpg", // Interstellar
-
-  // Indian (Bollywood & South)
-  "https://image.tmdb.org/t/p/original/ctMserH8g2SeOAnCw5gFjdQF8mo.jpg", // RRR
-  "https://image.tmdb.org/t/p/original/z7A4jJtZ3Gx0NypQFvZb7BeMyrZ.jpg", // Jawan
-  "https://image.tmdb.org/t/p/original/gPbM0MK8CP8A174rmUwGsADNYKD.jpg", // Pathaan
-  "https://image.tmdb.org/t/p/original/1N3y7xG0zC2Vzz9vGvB9MvdnC5n.jpg", // KGF
-
-  // Upcoming
-  "https://image.tmdb.org/t/p/original/4HodYYKEIsGOdinkGi2Ucz6X9i0.jpg", // Dune 2
-  "https://image.tmdb.org/t/p/original/b6IRp6Pl2Fsq37r9jFhGoLtaqHm.jpg", // Deadpool 3
-  "https://image.tmdb.org/t/p/original/z7A4jJtZ3Gx0NypQFvZb7BeMyrZ.jpg", // Indian upcoming style
+  "https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/king-et00455480-1769617085.jpg",
+  "https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/kantara-a-legend-chapter-1-et00377351-1760336092.jpg",
+  "https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/mardaani-3-et00424340-1769673744.jpg",
+  "https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/mayasabha--the-hall-of-illusion-et00472022-1764308067.jpg",
+  "https://m.media-amazon.com/images/M/MV5BZGViMTg3MjYtMDc3Yy00NTVlLTgxM2YtNDc4MzUxMGVlNjVhXkEyXkFqcGc@._V1_.jpg",
+  "https://assets-in.bmscdn.com/iedb/movies/images/mobile/listing/xxlarge/dhurandhar-part-2-et00478890-1767353118.jpg"
 ];
 
 
