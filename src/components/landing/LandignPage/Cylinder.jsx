@@ -13,7 +13,7 @@ const Cylinder = () => {
   });
 
   // Reverted to fixed radius as per request
-  const radius = 30;
+  const radius = 40;
 
   // Adjust position on mobile to fit the view (move it further back)
   const isMobile = viewport.width < 10;
@@ -25,11 +25,11 @@ const Cylinder = () => {
       rotation={[
         0.1, // tilt backward (X axis)
         2.4, // facing angle (Y axis)
-        0.35, // diagonal slant (Z axis)
+        0, // diagonal slant (Z axis)
       ]}
-      position={[0, 0, responsiveZ]}
+      position={[0, -2, responsiveZ-10]}
     >
-      <cylinderGeometry args={[radius, radius, 50, 45, 60, true]} />
+      <cylinderGeometry args={[radius, radius, 30, 30, 60, true]} />
       <meshStandardMaterial transparent map={tex} side={THREE.DoubleSide} />
       <meshStandardMaterial transparent map={tex} side={THREE.DoubleSide} />
     </mesh>

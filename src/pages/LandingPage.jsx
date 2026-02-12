@@ -1,11 +1,11 @@
 import { Canvas, useThree } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import Cylinder from "../components/landing/Cylinder";
-import CenterText from "../components/landing/CenterText";
-import RectangleBackground from "../components/landing/RectangleBackground";
-import ScrollCards from "../components/landing/ScrollCards";
+import Cylinder from "../components/landing/LandignPage/Cylinder";
+import CenterText from "../components/landing/LandignPage/CenterText";
+// import RectangleBackground from "../components/landing/RectangleBackground";
+import ScrollCards from "../components/landing/LandignPage/ScrollCards";
 import { useEffect } from "react";
-
+import { Navbar2 } from "../components/landing/LandignPage/Navbar";
 function ResponsiveCamera() {
   const { camera, size } = useThree();
 
@@ -40,22 +40,35 @@ function ResponsiveCamera() {
 export default function App() {
   return (
     <>
-      <div className="bg-amber-600 w-full h-[100dvh] fixed inset-0">
-        <Canvas camera={{ position: [0, 0, 30], fov: 60 }} className="touch-none">
+      <Navbar2 />
+
+      {/* Fixed hero - stays in background */}
+      <div className="bg-black w-full h-dvh fixed inset-0 z-0">
+        <Canvas camera={{ position: [0, 0, 30], fov: 25 }}>
           <ResponsiveCamera />
           <ambientLight intensity={1} />
           <Cylinder />
           <CenterText />
-          {/* <RectangleBackground /> */}
-          {/* <OrbitControls enableZoom={false} /> */}
         </Canvas>
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] bg-[#f26d2b] rounded-full blur-[100px] opacity-40 mix-blend-overlay" />
-        </div>
       </div>
-      <div>
-        {/* Scroll cards */}
+
+      {/* 1. This spacer allows the user to see the Hero 
+         before the cards start coming up. 
+      */}
+      <div className="h-screen" />
+
+      {/* 2. Added relative and z-10 to ensure it 
+         scrolls OVER the fixed Three.js background. 
+      */}
+      <div className="relative z-10">
         <ScrollCards />
+      </div>
+
+      {/* 3. A final spacer or content section so the 
+         last card can "stick" while this moves over it. 
+      */}
+      <div className="relative z-20 bg-white h-screen flex items-center justify-center">
+        <h2 className="text-black text-4xl">Final Section Content</h2>
       </div>
     </>
   );

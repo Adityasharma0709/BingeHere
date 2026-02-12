@@ -1,8 +1,8 @@
-import SideMenu from "./sideMenu";
-import Dropdown from "./Dropdown";
+import SideMenu from "../sideMenu";
+import Dropdown from "../Dropdown";
 import { Search } from "lucide-react";
 import { useState } from "react";
-import LoginModal from "../loginModal";
+import LoginModal from "../../loginModal";
 
 const Navbar = () => {
   const [isRegisterOpen, setIsRegisterOpen] = useState(false);
@@ -11,10 +11,8 @@ const Navbar = () => {
     <>
       <nav className="w-full bg-white border-b shadow-sm">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-3 py-2 gap-3">
-
           {/* LEFT */}
           <div className="flex items-center gap-3 flex-1">
-
             {/* Logo */}
             <div className="text-lg md:text-2xl font-bold whitespace-nowrap">
               <span className="text-black">Binge</span>
@@ -36,7 +34,6 @@ const Navbar = () => {
 
           {/* RIGHT */}
           <div className="flex items-center gap-3">
-
             <span className="hidden md:flex items-center gap-1 text-sm cursor-pointer">
               <Dropdown />
             </span>
@@ -73,5 +70,50 @@ const Navbar = () => {
     </>
   );
 };
+function Navbar2() {
+  return (
+    <nav
+      className="
+   fixed top-0 left-0 w-full
+   z-50
+   flex items-center justify-between
+   px-8 py-4
+   text-white
+   backdrop-blur-md
+   bg-black/20
+ "
+    >
+      {/* Logo */}{" "}
+      <div className="text-lg font-semibold tracking-wide">Nexus </div>
+      {/* Auth buttons */}
+      <div className="flex gap-4 items-center">
+        <button
+          className="
+      px-5 py-2
+      border border-white/40
+      rounded-full
+      hover:bg-white/10
+      transition
+    "
+        >
+          Sign in
+        </button>
 
-export default Navbar;
+        <button
+          className="
+      px-5 py-2
+      bg-white text-black
+      rounded-full
+      font-medium
+      hover:bg-white/90
+      transition
+    "
+        >
+          Register
+        </button>
+      </div>
+    </nav>
+  );
+}
+
+export { Navbar, Navbar2 };
