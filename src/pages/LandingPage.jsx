@@ -5,6 +5,14 @@ import { Link } from "react-router-dom";
 export default function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isRegisterOpen, setIsRegisterOpen] = useState(false);
+  const [name, setname] = useState("");
+  const [phone, setphone] = useState("");
+  const [email, setemail] = useState("");
+
+  // validation
+  const nameIsValid = /^[A-Za-z]*$/.test(name); // Only letters
+  const phoneDigits = phone.replace(/\D/g, "");
+  const phoneIsValid = phoneDigits.length === 10;
 
   /* ---------------- REGEX ---------------- */
  const usernameRegex = /^[a-zA-Z0-9_]+$/;
