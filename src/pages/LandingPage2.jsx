@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import BannerCarousel from "../components/landing/BannerCarousel";
 import CategoryBar from "../components/landing/category";
-import {Navbar} from "../components/landing/LandignPage/Navbar";
+import Navbar from "../components/landing/Navbar";
 import WindowCarousel from "../components/landing/WindowCarousel";
 import MovieCard from "../components/landing/MovieCard";
 import PremiereCard from "../components/landing/PremierCard";
